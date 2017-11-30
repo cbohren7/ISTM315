@@ -60,7 +60,7 @@
             // txtCustomerID
             // 
             this.txtCustomerID.Location = new System.Drawing.Point(172, 23);
-            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(96, 31);
             this.txtCustomerID.TabIndex = 1;
@@ -69,7 +69,7 @@
             // btnGetCustomer
             // 
             this.btnGetCustomer.Location = new System.Drawing.Point(286, 23);
-            this.btnGetCustomer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnGetCustomer.Margin = new System.Windows.Forms.Padding(6);
             this.btnGetCustomer.Name = "btnGetCustomer";
             this.btnGetCustomer.Size = new System.Drawing.Size(192, 44);
             this.btnGetCustomer.TabIndex = 2;
@@ -90,7 +90,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(172, 96);
-            this.txtName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtName.Margin = new System.Windows.Forms.Padding(6);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(596, 31);
@@ -110,7 +110,7 @@
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(172, 146);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(6);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(596, 31);
@@ -130,7 +130,7 @@
             // txtCity
             // 
             this.txtCity.Location = new System.Drawing.Point(172, 196);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(6);
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
             this.txtCity.Size = new System.Drawing.Size(596, 31);
@@ -150,7 +150,7 @@
             // txtState
             // 
             this.txtState.Location = new System.Drawing.Point(172, 246);
-            this.txtState.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtState.Margin = new System.Windows.Forms.Padding(6);
             this.txtState.Name = "txtState";
             this.txtState.ReadOnly = true;
             this.txtState.Size = new System.Drawing.Size(56, 31);
@@ -170,7 +170,7 @@
             // txtZipCode
             // 
             this.txtZipCode.Location = new System.Drawing.Point(622, 246);
-            this.txtZipCode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtZipCode.Margin = new System.Windows.Forms.Padding(6);
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.ReadOnly = true;
             this.txtZipCode.Size = new System.Drawing.Size(146, 31);
@@ -180,7 +180,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(30, 329);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(6);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 44);
             this.btnAdd.TabIndex = 13;
@@ -192,7 +192,7 @@
             // 
             this.btnModify.Enabled = false;
             this.btnModify.Location = new System.Drawing.Point(194, 329);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(6);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(150, 44);
             this.btnModify.TabIndex = 14;
@@ -204,7 +204,7 @@
             // 
             this.btnDelete.Enabled = false;
             this.btnDelete.Location = new System.Drawing.Point(356, 329);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 44);
             this.btnDelete.TabIndex = 15;
@@ -216,7 +216,7 @@
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(620, 327);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(6);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(150, 44);
             this.btnExit.TabIndex = 16;
@@ -229,7 +229,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(804, 400);
+            this.ClientSize = new System.Drawing.Size(805, 400);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnModify);
@@ -248,7 +248,7 @@
             this.Controls.Add(this.txtCustomerID);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmCustomerMaintenance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Maintenance";
