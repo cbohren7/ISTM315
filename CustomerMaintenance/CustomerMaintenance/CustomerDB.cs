@@ -113,7 +113,7 @@ namespace CustomerMaintenance
                 "AND Address = @OldAddress " +
                 "AND City = @OldCity " +
                 "AND State = @OldState " +
-                "AND ZipCode = @OldZipCode";
+                "AND ZipCode = @OldZipCode";//make sure there are spaces and commas
             SqlCommand updateCommand =
                 new SqlCommand(updateStatement, connection);
             updateCommand.Parameters.AddWithValue(
