@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BPUBDB.cs" />
     <Compile Include="frmStudentMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>
