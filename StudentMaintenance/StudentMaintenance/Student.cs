@@ -8,69 +8,69 @@ namespace StudentMaintenance
 {
     public class Student
     {
-        private int studentID;
-        private string firstName;
-        private string lastName;
-        private string address;
+        private int sid;
+        private string fName;
+        private string lName;
+        private string street;
         private string city;
         private string state;
         private string zip; 
 
         public Student() { }
 
-        public Student(int studentID, string firstName, string lastName, string address,
+        public Student(int sid, string fName, string lName, string street, string city,
             string state, string zip)
         {
-            this.StudentID = studentID;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Address = address;
+            this.SID = sid;
+            this.Fname = fName;
+            this.Lname = lName;
+            this.Street = street;
             this.City = city;
             this.State = state;
             this.Zip = zip;
         }
 
-        public int StudentID { //what variable type should this be?
+        public int SID { //what variable type should this be?
             get
             {
-                return studentID;
+                return sid;
             }
             set
             {
-                studentID = value;
+                sid = value;
             }
         }
 
-        public string FirstName {
+        public string Fname {
             get
             {
-                return firstName;
+                return fName;
             }
             set
             {
-                firstName = value;
+                fName = value;
             }
         }
 
-        public string LastName {
+        public string Lname {
             get
             {
-                return lastName;
+                return lName;
             }
             set
             {
-                lastName = value;
+                lName = value;
             }
         }
 
-        public string Address {
+        public string Street {
             get
             {
-                return address;
+                return street;
             }
             set
             {
-                address = value;
+                street = value;
             }
         }
 
