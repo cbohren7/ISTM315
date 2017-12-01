@@ -1,6 +1,6 @@
 ﻿namespace StudentMaintenance
 {
-    partial class Form1
+    partial class frmStudentMaintenance
     {
         /// <summary>
         /// Required designer variable.
