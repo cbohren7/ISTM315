@@ -3,41 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace StudentMaintenance
 {
     public static class StudentDB
     {
-        public static Student GetStudent(int sid)
+        public static Student GetStudent(string SID)
         {
             MySqlConnection connection = BPUBDB.GetConnection();
             string selectStatement
-                = "SELECT SID, Fname, Lname, Street, City, State, Zip "
+                = "SELECT SID, Fname, Lname, Street, City, State, Zip, Buyer, Seller "
                 + "FROM Student "
                 + "WHERE SID = @SID";
             // must use @ because they are using a parameterized query, if they don't, SQLInjection can come into play
             // parameterized queries are the first guard against SQL injections
             MySqlCommand selectCommand =
                 new MySqlCommand(selectStatement, connection);
-            selectCommand.Parameters.AddWithValue("@SID", sid);
+            selectCommand.Parameters.AddWithValue("@SID", SID);
             //this creates parameters against SQL injections
             try
             {
                 connection.Open();
+                MessageBox.Show("This worked");
                 MySqlDataReader stuReader =
                     selectCommand.ExecuteReader(CommandBehavior.SingleRow); //What is this?!
                 // calling th execute reader method
                 if (stuReader.Read())
                 {
                     Student student = new Student();
-                    student.SID = (int)stuReader["StudentID"];
+                    student.SID = (string)stuReader["SID"];
                     student.Fname = stuReader["Fname"].ToString();
                     student.Lname = stuReader["Lname"].ToString();
                     student.Street = stuReader["Street"].ToString();
                     student.City = stuReader["City"].ToString();
                     student.State = stuReader["State"].ToString();
                     student.Zip = stuReader["Zip"].ToString();
+                    student.Buyer = (bool)stuReader["Buyer"];
+                    student.Seller = (bool)stuReader["Seller"];
                     return student;
                     // capitilization matters
                 }
@@ -56,27 +61,33 @@ namespace StudentMaintenance
             }
         }
 
-        public static int AddCustomer(Student customer)
+        public static int AddCustomer(Student student)
         {
             MySqlConnection connection = BPUBDB.GetConnection();
             string insertStatement =
                 "INSERT Student " +
-                "(Fname, Lname, Street, City, State, Zip) " +
-                "VALUES (@Fname, @Lname, @Street, @City, @State, @Zip)";
+                "(SID, Fname, Lname, Street, City, State, Zip, buyer?, seller?) " + //do the buyer seller fields have '?' 
+                "VALUES (@SID, @Fname, @Lname, @Street, @City, @State, @Zip, @Buyer, @Seller)";
             MySqlCommand insertCommand =
                 new MySqlCommand(insertStatement, connection);
             insertCommand.Parameters.AddWithValue(
-                "@Fname", customer.Fname);
+                "@SID", student.SID);
             insertCommand.Parameters.AddWithValue(
-                "@Lname", customer.Lname);
+                "@Fname", student.Fname);
             insertCommand.Parameters.AddWithValue(
-                "@Street", customer.Street);
+                "@Lname", student.Lname);
             insertCommand.Parameters.AddWithValue(
-                "@City", customer.City);
+                "@Street", student.Street);
             insertCommand.Parameters.AddWithValue(
-                "@State", customer.State);
+                "@City", student.City);
             insertCommand.Parameters.AddWithValue(
-                "@Zip", customer.Zip);
+                "@State", student.State);
+            insertCommand.Parameters.AddWithValue(
+                "@Zip", student.Zip);
+            insertCommand.Parameters.AddWithValue(
+               "@Buyer", student.Buyer);
+            insertCommand.Parameters.AddWithValue(
+                "@Seller", student.Seller);
             try
             {
                 connection.Open();
@@ -107,21 +118,28 @@ namespace StudentMaintenance
             MySqlConnection connection = BPUBDB.GetConnection();
             string updateStatement =
                 "UPDATE Student SET " +
+                "SID = @NewSID, " +
                 "Fname = @NewFname, " +
                 "Lname = @NewLname, " +
                 "Street = @NewStreet, " +
                 "City = @NewCity, " +
                 "State = @NewState, " +
-                "Zip = @NewZip " +
+                "Zip = @NewZip, " +
+                "buyer? = @NewBuyer, " +
+                "seller? = @NewSeller " +
                 "WHERE SID = @oldSID " + //must be = the primary key
                 "AND Fname = @OldFname " +
                 "AND Lname = @OldLname " +
                 "AND Street = @OldStreet " +
                 "AND City = @OldCity " +
-                "AND State = @OldState " +
-                "AND Zip = @OldZip ";//make sure there are spaces and commas
+                "AND State = @OldState " + //make sure there are spaces and commas
+                "AND Zip = @OldZip, " +
+                "AND buyer? = @OldBuyer, " +
+                "AND seller? = @OldSeller ";
             MySqlCommand updateCommand =
                 new MySqlCommand(updateStatement, connection);
+            updateCommand.Parameters.AddWithValue(
+                "@NewSID", newStudent.SID);
             updateCommand.Parameters.AddWithValue(
                 "@NewFname", newStudent.Fname);
             updateCommand.Parameters.AddWithValue(
@@ -134,6 +152,10 @@ namespace StudentMaintenance
                 "@NewState", newStudent.State);
             updateCommand.Parameters.AddWithValue(
                 "@NewZip", newStudent.Zip);
+            updateCommand.Parameters.AddWithValue(
+               "@NewBuyer", newStudent.Buyer);
+            updateCommand.Parameters.AddWithValue(
+                "@NewSeller", newStudent.Seller);
             updateCommand.Parameters.AddWithValue(
                 "@OldSID", oldStudent.SID);
             updateCommand.Parameters.AddWithValue(
@@ -148,6 +170,10 @@ namespace StudentMaintenance
                 "@OldState", oldStudent.State);
             updateCommand.Parameters.AddWithValue(
                 "@OldZip", oldStudent.Zip);
+            updateCommand.Parameters.AddWithValue(
+             "@OldBuyer", oldStudent.Buyer);
+            updateCommand.Parameters.AddWithValue(
+                "@OldSeller", oldStudent.Seller);
             try
             {
                 connection.Open();

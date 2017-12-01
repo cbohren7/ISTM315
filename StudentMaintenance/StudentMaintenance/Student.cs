@@ -8,102 +8,130 @@ namespace StudentMaintenance
 {
     public class Student
     {
-        private int sid;
-        private string fName;
-        private string lName;
-        private string street;
-        private string city;
-        private string state;
-        private string zip; 
+        private string strSid;
+        private string strFname;
+        private string strLname;
+        private string strStreet;
+        private string strCity;
+        private string strState;
+        private string strZip;
+        private bool blnBuyer;
+        private bool blnSeller;
 
         public Student() { }
 
-        public Student(int sid, string fName, string lName, string street, string city,
-            string state, string zip)
+        public Student(string strSid, string strFname, string strLname, string strStreet, string strCity,
+            string strState, string strZip, bool blnBuyer, bool blnSeller)
         {
-            this.SID = sid;
-            this.Fname = fName;
-            this.Lname = lName;
-            this.Street = street;
-            this.City = city;
-            this.State = state;
-            this.Zip = zip;
+            this.SID = strSid;
+            this.Fname = strFname;
+            this.Lname = strLname;
+            this.Street = strStreet;
+            this.City = strCity;
+            this.State = strState;
+            this.Zip = strZip;
+            this.Buyer = blnBuyer;
+            this.Seller = blnSeller;
         }
 
-        public int SID { //what variable type should this be?
+        public string SID { //what variable type should this be?
             get
             {
-                return sid;
+                return strSid;
             }
             set
             {
-                sid = value;
+                strSid = value;
             }
         }
 
         public string Fname {
             get
             {
-                return fName;
+                return strFname;
             }
             set
             {
-                fName = value;
+                strFname = value;
             }
         }
 
         public string Lname {
             get
             {
-                return lName;
+                return strLname;
             }
             set
             {
-                lName = value;
+                strLname = value;
             }
         }
 
         public string Street {
             get
             {
-                return street;
+                return strStreet;
             }
             set
             {
-                street = value;
+                strStreet = value;
             }
         }
 
         public string City {
             get
             {
-                return city;
+                return strCity;
             }
             set
             {
-                city = value;
+                strCity = value;
             }
         }
 
         public string State {
             get
             {
-                return state;
+                return strState;
             }
             set
             {
-                state = value;
+                strState = value;
             }
         }
 
         public string Zip {
             get
             {
-                return zip;
+                return strZip;
             }
             set
             {
-                zip = value;
+                strZip = value;
+            }
+        }
+
+        public bool Buyer
+        {
+            get
+            {
+                return blnBuyer;
+            }
+            set
+            {
+                blnBuyer = value;
+            }
+        }
+
+        public bool Seller
+        {
+            get
+            {
+                return blnSeller;
+            }
+            set
+            {
+                blnSeller = value;
             }
         }
     }
