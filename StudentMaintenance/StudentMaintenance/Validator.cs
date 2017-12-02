@@ -53,7 +53,23 @@ namespace StudentMaintenance
                     return false;
                 }
             }
+
             return true;
+        }
+
+        public static bool IsChecked(CheckBox checkBox1, CheckBox checkBox2)
+        {
+            if (!checkBox1.Checked && !checkBox2.Checked)
+            {
+                MessageBox.Show("Please select at least one!");
+                return false;
+            }
+            
+            else
+            {
+                return true;
+            }
+        
         }
 
         /// <summary>

@@ -8,9 +8,10 @@ namespace StudentMaintenance
 {
     public class Student
     {
-        private string strSid;
+        private string strSID;
         private string strFname;
         private string strLname;
+        private string strSuffix;
         private string strStreet;
         private string strCity;
         private string strState;
@@ -20,12 +21,13 @@ namespace StudentMaintenance
 
         public Student() { }
 
-        public Student(string strSid, string strFname, string strLname, string strStreet, string strCity,
-            string strState, string strZip, bool blnBuyer, bool blnSeller)
+        public Student(string SID, string Fname, string Lname, string Suffix, string Street, string City,
+            string State, string Zip, bool Buyer, bool Seller)
         {
-            this.SID = strSid;
+            this.SID = strSID;
             this.Fname = strFname;
             this.Lname = strLname;
+            this.Suffix = strSuffix;
             this.Street = strStreet;
             this.City = strCity;
             this.State = strState;
@@ -37,11 +39,11 @@ namespace StudentMaintenance
         public string SID { //what variable type should this be?
             get
             {
-                return strSid;
+                return strSID;
             }
             set
             {
-                strSid = value;
+                strSID = value;
             }
         }
 
@@ -64,6 +66,18 @@ namespace StudentMaintenance
             set
             {
                 strLname = value;
+            }
+        }
+
+        public string Suffix
+        {
+            get
+            {
+                return strSuffix;
+            }
+            set
+            {
+                strSuffix = value;
             }
         }
 
