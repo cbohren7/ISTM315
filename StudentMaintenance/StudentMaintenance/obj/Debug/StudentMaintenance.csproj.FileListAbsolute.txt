@@ -11,3 +11,14 @@ C:\Users\cbohren\Desktop\School\ISTM 315\ISTM315\StudentMaintenance\StudentMaint
 C:\Users\cbohren\Desktop\School\ISTM 315\ISTM315\StudentMaintenance\StudentMaintenance\bin\Debug\MySql.Data.dll
 C:\Users\cbohren\Desktop\School\ISTM 315\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.exe
 C:\Users\cbohren\Desktop\School\ISTM 315\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.pdb
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\bin\Debug\StudentMaintenance.exe.config
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.exe
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.pdb
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\bin\Debug\StudentMaintenance.exe
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\bin\Debug\StudentMaintenance.pdb
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\bin\Debug\MySql.Data.dll
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.csprojResolveAssemblyReference.cache
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.frmAddModifyStudent.resources
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.frmStudentMaintenance.resources
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.Properties.Resources.resources
+C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.csproj.GenerateResource.Cache

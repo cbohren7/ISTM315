@@ -103,12 +103,14 @@ private void frmAddModifyStudent_Load(object sender, EventArgs e)
         private bool IsValidData()
         {
             return
+                Validator.IsPresent(txtSID) &&
                 Validator.IsPresent(txtFname) &&
                 Validator.IsPresent(txtLname) &&
                 Validator.IsPresent(txtStreet) &&
                 Validator.IsPresent(txtCity) &&
                 Validator.IsPresent(cboState) &&
                 Validator.IsPresent(txtZip) &&
+                Validator.IsInt32(txtZip) &&
                 Validator.IsChecked(chkBuyer, chkSeller);
         }
 

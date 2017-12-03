@@ -12,7 +12,7 @@ namespace StudentMaintenance
         public static MySqlConnection GetConnection()
         {
             string connectionString =
-                "server = localhost; User Id = root; password = mypassword; database = BPUB";
+                "server = localhost; User Id = root; password = swasth00; database = BPUB";
             // is this right?
             MySqlConnection connection = new MySqlConnection(connectionString);
             return connection;
