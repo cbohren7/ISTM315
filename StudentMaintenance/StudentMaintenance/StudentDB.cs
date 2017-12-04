@@ -11,6 +11,12 @@ namespace StudentMaintenance
 {
     public static class StudentDB
     {
+        /// <summary>
+        /// This is opening the BPUBDB connection and using queries to access the following fields: SID, Fname, 
+        /// Lname, Suffix, City, State, Zip, buyer, and seller
+        /// </summary>
+        /// <param name="SID"></param>
+        /// <returns></returns>
         public static Student GetStudent(string SID)
         {
             MySqlConnection connection = BPUBDB.GetConnection();
@@ -18,18 +24,16 @@ namespace StudentMaintenance
                 = "SELECT SID, Fname, Lname, Suffix, Street, City, State, Zip, buyer, seller "
                 + "FROM Student "
                 + "WHERE SID = @SID";
-            // must use @ because they are using a parameterized query, if they don't, SQLInjection can come into play
-            // parameterized queries are the first guard against SQL injections
+
             MySqlCommand selectCommand =
                 new MySqlCommand(selectStatement, connection);
             selectCommand.Parameters.AddWithValue("@SID", SID);
-            //this creates parameters against SQL injections
+
             try
             {
-                connection.Open();
+                connection.Open(); //opening the DB connection
                 MySqlDataReader stuReader =
-                    selectCommand.ExecuteReader(CommandBehavior.SingleRow); //What is this?!
-                // calling th execute reader method
+                    selectCommand.ExecuteReader(CommandBehavior.SingleRow); 
                 if (stuReader.Read())
                 {
                     Student student = new Student();
@@ -44,7 +48,7 @@ namespace StudentMaintenance
                     student.Buyer = Convert.ToBoolean(stuReader["Buyer"]);
                     student.Seller = Convert.ToBoolean(stuReader["Seller"]);
                     return student;
-                    // capitilization matters
+
                 }
                 else
                 {
@@ -57,10 +61,13 @@ namespace StudentMaintenance
             }
             finally
             {
-                connection.Close();
+                connection.Close(); //closing the DB connection
             }
         }
-
+        /// <summary>
+        /// THis is adding a student's information to the BPUBDB
+        /// </summary>
+        /// <param name="student"></param>
         public static void AddStudent(Student student)
         {
             MySqlConnection connection = BPUBDB.GetConnection();
@@ -90,20 +97,16 @@ namespace StudentMaintenance
                "@Buyer", student.Buyer);
             insertCommand.Parameters.AddWithValue(
                 "@Seller", student.Seller);
+
             try
             {
                 connection.Open();
                 insertCommand.ExecuteNonQuery();
                 string selectStatement =
                     "SELECT IDENT_CURRENT('Student') FROM Student";
-                //string nextID = "SELECT MAX(SID) FROM Student";
                 MySqlCommand selectCommand =
                     new MySqlCommand(selectStatement, connection);
-                //int sid = Convert.ToInt32(selectCommand.ExecuteScalar());
-                //return sid;
-                //How??
-            }//this won't work in our solution, NEED to go find the MAX(ID)+ 1, Then you can insert data into it
-            //must be two qeuries, can't do it in the same lines
+            }
             catch (MySqlException ex)
             {
                 throw ex;
@@ -113,7 +116,12 @@ namespace StudentMaintenance
                 connection.Close();
             }
         }
-        
+        /// <summary>
+        /// This is accessing the BPUBDB and updating the changed fields.
+        /// </summary>
+        /// <param name="oldStudent"></param>
+        /// <param name="newStudent"></param>
+        /// <returns></returns>
         public static bool UpdateStudent(Student oldStudent,
             Student newStudent)
         {
@@ -135,7 +143,7 @@ namespace StudentMaintenance
                 "AND Lname = @OldLname " +
                 "AND Street = @OldStreet " +
                 "AND City = @OldCity " +
-                "AND State = @OldState " + //make sure there are spaces and commas
+                "AND State = @OldState " + 
                 "AND Zip = @OldZip " +
             "AND Buyer = @OldBuyer " +
             "AND Seller = @OldSeller ";

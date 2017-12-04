@@ -7,6 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//AUTHOR:       Madeline Moen, Karuna Kankani, Christian Bohren
+//COURSE:	    ISTM 315.501
+//FORM:		    frmStudentMaintenance.cs ; frmAddModifyStudent.cs
+//PURPOSE:	    This program is designed to maintain student records 
+//              through mofifying and retrieving students from the database.
+//INITIALIZE:   MySql Student Database
+//			
+//INPUT:	    Student ID from txtSID
+//PROCESS:		GetStudent, ClearControls, DisplayStudent
+//OUTPUT:		The Student's first name, last name, stuffix, street, city, state,
+//              zip, and buyer and/or seller status will be displayed in the text boxes
+//			    once the user enters a student ID.
+//TERMINATE:	Student Database connection will be terminated once the student information
+//              is retrieved from the database.
+//HONOR CODE:	“On my honor, as an Aggie, I have neither given 
+//			    nor received unauthorized aid on this academic 
+//			    work.”
 
 namespace StudentMaintenance
 {
@@ -43,7 +60,7 @@ namespace StudentMaintenance
         }
 
         /// <summary>
-        /// this method gets the student from the form and calls the GetStudent method from the StudentDB class
+        /// This method gets the student from the form and calls the GetStudent method from the StudentDB class.
         /// </summary>
         /// <param name="SID"></param>
         private void GetStudent(string SID)
@@ -98,7 +115,7 @@ namespace StudentMaintenance
         }
 
         /// <summary>
-        /// 
+        /// Clicking Add button sends users to a blank frmAddModifyStudent form.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -116,7 +133,7 @@ namespace StudentMaintenance
         }
 
         /// <summary>
-        /// 
+        /// When user clicks modify button, the frmAddModifyStudent form is displayed with the student's current information.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -142,7 +159,7 @@ namespace StudentMaintenance
         }
 
         /// <summary>
-        /// This button exits the form
+        /// This button exits the form.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

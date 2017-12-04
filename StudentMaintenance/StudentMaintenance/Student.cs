@@ -21,6 +21,19 @@ namespace StudentMaintenance
 
         public Student() { }
 
+        /// <summary>
+        /// This is qualifying the fields for the student.
+        /// </summary>
+        /// <param name="SID"></param>
+        /// <param name="Fname"></param>
+        /// <param name="Lname"></param>
+        /// <param name="Suffix"></param>
+        /// <param name="Street"></param>
+        /// <param name="City"></param>
+        /// <param name="State"></param>
+        /// <param name="Zip"></param>
+        /// <param name="Buyer"></param>
+        /// <param name="Seller"></param>
         public Student(string SID, string Fname, string Lname, string Suffix, string Street, string City,
             string State, string Zip, bool Buyer, bool Seller)
         {
@@ -35,8 +48,11 @@ namespace StudentMaintenance
             this.Buyer = blnBuyer;
             this.Seller = blnSeller;
         }
-
-        public string SID { //what variable type should this be?
+        /// <summary>
+        /// Uses get set accessors for the student ID.
+        /// </summary>
+        public string SID
+        { 
             get
             {
                 return strSID;
@@ -46,8 +62,11 @@ namespace StudentMaintenance
                 strSID = value;
             }
         }
-
-        public string Fname {
+        /// <summary>
+        /// Get Set accessors for the student's first name.
+        /// </summary>
+        public string Fname
+        {
             get
             {
                 return strFname;
@@ -57,8 +76,11 @@ namespace StudentMaintenance
                 strFname = value;
             }
         }
-
-        public string Lname {
+        /// <summary>
+        /// Get Set accessors for the student's last name.
+        /// </summary>
+        public string Lname
+        {
             get
             {
                 return strLname;
@@ -68,7 +90,9 @@ namespace StudentMaintenance
                 strLname = value;
             }
         }
-
+        /// <summary>
+        /// Get Set accessors for the student's suffix.
+        /// </summary>
         public string Suffix
         {
             get
@@ -80,8 +104,11 @@ namespace StudentMaintenance
                 strSuffix = value;
             }
         }
-
-        public string Street {
+        /// <summary>
+        /// Get Set accessors for the student's street address.
+        /// </summary>
+        public string Street
+        {
             get
             {
                 return strStreet;
@@ -91,8 +118,11 @@ namespace StudentMaintenance
                 strStreet = value;
             }
         }
-
-        public string City {
+        /// <summary>
+        /// Get Set accessors for the student's city.
+        /// </summary>
+        public string City
+        {
             get
             {
                 return strCity;
@@ -102,8 +132,11 @@ namespace StudentMaintenance
                 strCity = value;
             }
         }
-
-        public string State {
+        /// <summary>
+        /// Get Set accessors for the student's state.
+        /// </summary>
+        public string State
+        {
             get
             {
                 return strState;
@@ -113,8 +146,11 @@ namespace StudentMaintenance
                 strState = value;
             }
         }
-
-        public string Zip {
+        /// <summary>
+        /// Get Set accessors for the student's zip code.
+        /// </summary>
+        public string Zip
+        {
             get
             {
                 return strZip;
@@ -124,7 +160,9 @@ namespace StudentMaintenance
                 strZip = value;
             }
         }
-
+        /// <summary>
+        /// Get Set accessors used for buyer.
+        /// </summary>
         public bool Buyer
         {
             get
@@ -136,7 +174,9 @@ namespace StudentMaintenance
                 blnBuyer = value;
             }
         }
-
+        /// <summary>
+        /// Get Set accessors for seller.
+        /// </summary>
         public bool Seller
         {
             get

@@ -21,7 +21,11 @@ namespace StudentMaintenance
         public Student student;
 
       
-
+        /// <summary>
+        /// This loads the Add Modify Student form and displays the students information if modifying student.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 private void frmAddModifyStudent_Load(object sender, EventArgs e)
         {
             
@@ -39,7 +43,9 @@ private void frmAddModifyStudent_Load(object sender, EventArgs e)
         }
 
   
-
+        /// <summary>
+        /// This displays the students information on form.
+        /// </summary>
         private void DisplayStudent()
         {
             txtSID.Text = student.SID;
@@ -54,7 +60,11 @@ private void frmAddModifyStudent_Load(object sender, EventArgs e)
             chkSeller.Checked = student.Seller;
             
         }
-
+        /// <summary>
+        /// This method updates and adds the information on the student.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAccept_Click(object sender, EventArgs e)
         {
             if (IsValidData())
@@ -99,7 +109,10 @@ private void frmAddModifyStudent_Load(object sender, EventArgs e)
                 }
             }
         }
-
+        /// <summary>
+        /// This method checks that all entered data is valid.
+        /// </summary>
+        /// <returns></returns>
         private bool IsValidData()
         {
             return
@@ -113,7 +126,10 @@ private void frmAddModifyStudent_Load(object sender, EventArgs e)
                 Validator.IsInt32(txtZip) &&
                 Validator.IsChecked(chkBuyer, chkSeller);
         }
-
+        /// <summary>
+        /// This takes the values fro mthe textboxes and assigns them to the corresponding Student class variables.
+        /// </summary>
+        /// <param name="student"></param>
         private void PutStudentData(Student student)
         {
             student.SID = txtSID.Text;
@@ -122,13 +138,16 @@ private void frmAddModifyStudent_Load(object sender, EventArgs e)
             student.Suffix = txtSuffix.Text;
             student.Street = txtStreet.Text;
             student.City = txtCity.Text;
-            //student.State = cboState.SelectedValue.ToString();
             student.State = cboState.SelectedItem.ToString();
             student.Zip = txtZip.Text;
             student.Buyer = chkBuyer.Checked;
             student.Seller = chkSeller.Checked;
         }
-
+        /// <summary>
+        /// This closes the form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();

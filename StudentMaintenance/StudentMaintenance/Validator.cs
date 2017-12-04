@@ -56,7 +56,12 @@ namespace StudentMaintenance
 
             return true;
         }
-
+        /// <summary>
+        /// This is checking to see that the user checked at least one of the checkboxes.
+        /// </summary>
+        /// <param name="checkBox1"></param>
+        /// <param name="checkBox2"></param>
+        /// <returns></returns>
         public static bool IsChecked(CheckBox checkBox1, CheckBox checkBox2)
         {
             if (!checkBox1.Checked && !checkBox2.Checked)

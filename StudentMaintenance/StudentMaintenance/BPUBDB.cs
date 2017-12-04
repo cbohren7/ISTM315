@@ -9,11 +9,14 @@ namespace StudentMaintenance
 {
     public static class BPUBDB
     {
+        /// <summary>
+        /// This is the information for the connection to the MySql database.
+        /// </summary>
+        /// <returns>connection</returns>
         public static MySqlConnection GetConnection()
         {
             string connectionString =
                 "server = localhost; User Id = root; password = password; database = BPUB";
-            // is this right?
             MySqlConnection connection = new MySqlConnection(connectionString);
             return connection;
         }
