@@ -113,34 +113,38 @@
             // txtFname
             // 
             this.txtFname.Location = new System.Drawing.Point(112, 46);
-            this.txtFname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(375, 20);
             this.txtFname.TabIndex = 1;
+            this.txtFname.Tag = "First Name";
             // 
             // txtLname
             // 
             this.txtLname.Location = new System.Drawing.Point(112, 77);
-            this.txtLname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLname.Margin = new System.Windows.Forms.Padding(2);
             this.txtLname.Name = "txtLname";
             this.txtLname.Size = new System.Drawing.Size(375, 20);
             this.txtLname.TabIndex = 2;
+            this.txtLname.Tag = "Last Name";
             // 
             // txtStreet
             // 
             this.txtStreet.Location = new System.Drawing.Point(112, 139);
-            this.txtStreet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStreet.Margin = new System.Windows.Forms.Padding(2);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(375, 20);
             this.txtStreet.TabIndex = 4;
+            this.txtStreet.Tag = "Street";
             // 
             // txtCity
             // 
             this.txtCity.Location = new System.Drawing.Point(112, 174);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(375, 20);
             this.txtCity.TabIndex = 5;
+            this.txtCity.Tag = "City";
             // 
             // cboState
             // 
@@ -198,23 +202,25 @@
             "WV",
             "WY"});
             this.cboState.Location = new System.Drawing.Point(112, 205);
-            this.cboState.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboState.Margin = new System.Windows.Forms.Padding(2);
             this.cboState.Name = "cboState";
             this.cboState.Size = new System.Drawing.Size(70, 21);
             this.cboState.TabIndex = 6;
+            this.cboState.Tag = "State";
             // 
             // txtZip
             // 
             this.txtZip.Location = new System.Drawing.Point(112, 236);
-            this.txtZip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtZip.Margin = new System.Windows.Forms.Padding(2);
             this.txtZip.Name = "txtZip";
             this.txtZip.Size = new System.Drawing.Size(70, 20);
             this.txtZip.TabIndex = 7;
+            this.txtZip.Tag = "Zip Code";
             // 
             // btnAccept
             // 
             this.btnAccept.Location = new System.Drawing.Point(112, 269);
-            this.btnAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAccept.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(72, 28);
             this.btnAccept.TabIndex = 10;
@@ -226,7 +232,7 @@
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(411, 269);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(74, 28);
             this.btnCancel.TabIndex = 11;
@@ -237,10 +243,11 @@
             // txtSID
             // 
             this.txtSID.Location = new System.Drawing.Point(112, 16);
-            this.txtSID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSID.Margin = new System.Windows.Forms.Padding(2);
             this.txtSID.Name = "txtSID";
             this.txtSID.Size = new System.Drawing.Size(375, 20);
             this.txtSID.TabIndex = 0;
+            this.txtSID.Tag = "SID";
             // 
             // label7
             // 
@@ -256,7 +263,7 @@
             // 
             this.chkSeller.AutoSize = true;
             this.chkSeller.Location = new System.Drawing.Point(198, 237);
-            this.chkSeller.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkSeller.Margin = new System.Windows.Forms.Padding(2);
             this.chkSeller.Name = "chkSeller";
             this.chkSeller.Size = new System.Drawing.Size(52, 17);
             this.chkSeller.TabIndex = 9;
@@ -267,7 +274,7 @@
             // 
             this.chkBuyer.AutoSize = true;
             this.chkBuyer.Location = new System.Drawing.Point(198, 206);
-            this.chkBuyer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkBuyer.Margin = new System.Windows.Forms.Padding(2);
             this.chkBuyer.Name = "chkBuyer";
             this.chkBuyer.Size = new System.Drawing.Size(53, 17);
             this.chkBuyer.TabIndex = 8;
@@ -277,7 +284,7 @@
             // txtSuffix
             // 
             this.txtSuffix.Location = new System.Drawing.Point(112, 108);
-            this.txtSuffix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSuffix.Margin = new System.Windows.Forms.Padding(2);
             this.txtSuffix.Name = "txtSuffix";
             this.txtSuffix.Size = new System.Drawing.Size(70, 20);
             this.txtSuffix.TabIndex = 3;
@@ -319,7 +326,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAddModifyStudent";
             this.Text = "Add Modify Student";
             this.Load += new System.EventHandler(this.frmAddModifyStudent_Load);

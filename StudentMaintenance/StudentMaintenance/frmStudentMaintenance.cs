@@ -17,6 +17,12 @@ namespace StudentMaintenance
             InitializeComponent();
         }
         private Student student;
+
+        /// <summary>
+        /// When the Get Student button is clicked, if the SID is present, the student information is displayed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGetStudent_Click(object sender, EventArgs e)
         {
             if (Validator.IsPresent(txtSID))
@@ -36,6 +42,10 @@ namespace StudentMaintenance
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="SID"></param>
         private void GetStudent(string SID)
         {
             try
@@ -48,6 +58,10 @@ namespace StudentMaintenance
             }
         }
 
+        /// <summary>
+        /// All the textboxes are made blank.
+        /// </summary>
+        /// <param name="SID"></param>
         private void ClearControls()
         {
             txtSID.Text = "";
@@ -64,6 +78,10 @@ namespace StudentMaintenance
             txtSID.Focus();
         }
 
+        /// <summary>
+        /// The student information is displayed in textboxes as output.
+        /// </summary>
+        /// <param name="SID"></param>
         private void DisplayStudent()
         {
             txtSID.Text = student.SID;
@@ -79,6 +97,11 @@ namespace StudentMaintenance
             btnModify.Enabled = true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmAddModifyStudent addStudentForm = new frmAddModifyStudent();
@@ -92,6 +115,11 @@ namespace StudentMaintenance
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModify_Click(object sender, EventArgs e)
         {
             frmAddModifyStudent modifyStudentForm = new frmAddModifyStudent();
@@ -113,6 +141,11 @@ namespace StudentMaintenance
             }
         }
 
+        /// <summary>
+        /// This button exits the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

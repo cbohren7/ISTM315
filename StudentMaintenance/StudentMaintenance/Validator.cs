@@ -38,7 +38,7 @@ namespace StudentMaintenance
                 TextBox textBox = (TextBox)control;
                 if (textBox.Text == "")
                 {
-                    MessageBox.Show(textBox.Tag + " You are missing a required field.", Title);
+                    MessageBox.Show(textBox.Tag + " is a required field.", Title);
                     textBox.Focus();
                     return false;
                 }
@@ -48,7 +48,7 @@ namespace StudentMaintenance
                 ComboBox comboBox = (ComboBox)control;
                 if (comboBox.SelectedIndex == -1)
                 {
-                    MessageBox.Show(comboBox.Tag + " You are missing a required field.", "Entry Error");
+                    MessageBox.Show(comboBox.Tag + " is a required field.", "Entry Error");
                     comboBox.Focus();
                     return false;
                 }
@@ -92,27 +92,7 @@ namespace StudentMaintenance
             }
         }
 
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="textBox"></param>
-        ///// <returns></returns>
-        //public static bool IsAlphaNum (TextBox textBox)
-        //{
-        //    try
-        //    {
-        //        //IsAlphaNum.Equals(textBox.Text);
-        //        (textBox.(char.IsLetterOrDigit));
-        //        return true;
 
-        //    }
-        //    catch (FormatException)
-        //    {
-        //        MessageBox.Show(/*textBox.Tag +*/ " First Name, Last Name, and City only accept Letters..", Title);
-        //        //textBox.Focus();
-        //        return false;
-        //    }
-        //}
 
         /// <summary>
         /// Checks whether the user entered an int value into a text box.
