@@ -43,7 +43,7 @@ namespace StudentMaintenance
         }
 
         /// <summary>
-        /// this method gets the student from the form and calls the GetStudent method from the StudentDB method
+        /// this method gets the student from the form and calls the GetStudent method from the StudentDB class
         /// </summary>
         /// <param name="SID"></param>
         private void GetStudent(string SID)

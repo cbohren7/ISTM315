@@ -22,3 +22,6 @@ C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debu
 C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.frmStudentMaintenance.resources
 C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.Properties.Resources.resources
 C:\Users\Karuna\Documents\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.csproj.GenerateResource.Cache
+C:\Users\kmoe7\Desktop\ISTM315\StudentMaintenance\StudentMaintenance\bin\Debug\StudentMaintenance.exe.config
+C:\Users\kmoe7\Desktop\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.exe
+C:\Users\kmoe7\Desktop\ISTM315\StudentMaintenance\StudentMaintenance\obj\Debug\StudentMaintenance.pdb
